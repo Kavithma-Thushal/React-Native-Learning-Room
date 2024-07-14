@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
 import { View, Button, Image, StyleSheet } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
+import React, { useState } from 'react';
 
 export default function Gallery() {
     const [image, setImage] = useState<string | null>(null);
 
     const pickImage = async () => {
-        // No permissions request is necessary for launching the image library
         let result = await ImagePicker.launchImageLibraryAsync({
             mediaTypes: ImagePicker.MediaTypeOptions.All,
             allowsEditing: true,
@@ -21,6 +20,19 @@ export default function Gallery() {
         }
     };
 
+    const styles = StyleSheet.create({
+        container: {
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'center',
+        },
+        image: {
+            width: 200,
+            height: 200,
+            marginTop: 20,
+        },
+    });
+
     return (
         <View style={styles.container}>
             <Button title="Pick an image from camera roll" onPress={pickImage} />
@@ -28,16 +40,3 @@ export default function Gallery() {
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    image: {
-        width: 200,
-        height: 200,
-        marginTop: 20,
-    },
-});

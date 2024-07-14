@@ -1,13 +1,13 @@
 import { View, Text, StyleSheet, TextInput, Image, Button, Alert } from 'react-native';
+import { useRouter } from 'expo-router';
 import { useState } from 'react';
-import { Link, useRouter } from 'expo-router';
 
 export default function Index() {
   const [customerName, setCustomerName] = useState('');
   const router = useRouter();
 
   const saveCustomer = () => {
-    Alert.alert(`Customer Name: ${customerName}`);
+    Alert.alert(customerName);
   };
 
   const styles = StyleSheet.create({
@@ -45,13 +45,12 @@ export default function Index() {
 
       <Button title="Save" onPress={saveCustomer} />
 
-      <Link href="/profile">View Profile</Link>
-
       <Button
         onPress={() => router.push('/profile')}
         title="View Profile"
         color="#841584"
       />
+
     </View>
   );
 }
