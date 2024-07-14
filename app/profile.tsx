@@ -2,7 +2,6 @@ import { View, Text, StyleSheet, Button, FlatList } from 'react-native';
 import { router } from 'expo-router';
 
 export default function DetailsScreen() {
-
   const DATA = [
     {
       id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
@@ -28,7 +27,6 @@ export default function DetailsScreen() {
 
   return (
     <View style={styles.container}>
-
       <Button
         onPress={() => router.back()}
         title="Back"
@@ -40,7 +38,6 @@ export default function DetailsScreen() {
         renderItem={({ item }) => <Text>{item.title}</Text>}
         keyExtractor={item => item.id}
       />
-
     </View>
   );
 }

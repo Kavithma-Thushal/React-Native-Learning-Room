@@ -50,7 +50,6 @@ export default function Index() {
         title="View Profile"
         color="#841584"
       />
-
     </View>
   );
 }
