@@ -20,14 +20,14 @@ export default function DetailsScreen() {
     <View style={styles.container}>
       <Text>Details</Text>
       <Button
-  onPress={() => router.back()}
-  title="Learn More"
-  color="#841584"
-  accessibilityLabel="Learn more about this purple button"
-/>
-<FlatList
+        onPress={() => router.back()}
+        title="Learn More"
+        color="#841584"
+        accessibilityLabel="Learn more about this purple button"
+      />
+      <FlatList
         data={DATA}
-        renderItem={({item}) => <Text>{item.title}</Text>}
+        renderItem={({ item }) => <Text>{item.title}</Text>}
         keyExtractor={item => item.id}
       />
     </View>
@@ -39,5 +39,5 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-  },
+  },
 });
