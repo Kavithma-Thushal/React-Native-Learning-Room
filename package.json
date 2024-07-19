@@ -1,10 +1,10 @@
 {
-  "name": "linkedin-clone-app",
+  "name": "react-native-learning-room",
   "version": "1.0.0",
   "author": "Kavithma Thushal",
   "license": "Apache-2.0",
   "private": true,
-  "description": "This is LinkedIn Clone App Using React Native",
+  "description": "This is React Native learning in GDSE66",
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
