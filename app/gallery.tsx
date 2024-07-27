@@ -1,8 +1,9 @@
-import { View, Button, Image, StyleSheet } from 'react-native';
-import * as ImagePicker from 'expo-image-picker';
 import React, { useState } from 'react';
+import * as ImagePicker from 'expo-image-picker';
+import { View, Button, Image, StyleSheet } from 'react-native';
 
 export default function Gallery() {
+
     const [image, setImage] = useState<string | null>(null);
 
     const pickImage = async () => {

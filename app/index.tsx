@@ -1,10 +1,12 @@
-import { View, Text, StyleSheet, TextInput, Image, Button, Alert } from 'react-native';
-import { useRouter } from 'expo-router';
 import { useState } from 'react';
+import { useRouter } from 'expo-router';
+import { View, Text, StyleSheet, TextInput, Image, Button, Alert } from 'react-native';
 
 export default function Index() {
-  const [customerName, setCustomerName] = useState('');
+
   const router = useRouter();
+
+  const [customerName, setCustomerName] = useState('');
 
   const saveCustomer = () => {
     Alert.alert(customerName);
@@ -31,10 +33,7 @@ export default function Index() {
     <View>
       <Text style={styles.text}>Customer Management</Text>
 
-      <Image
-        style={styles.img}
-        source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }}
-      />
+      <Image style={styles.img} source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }}/>
 
       <TextInput
         style={styles.input}
